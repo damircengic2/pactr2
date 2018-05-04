@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="trm-R4-Zzb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MXM-oB-BuO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,6 +60,9 @@
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="trm-R4-Zzb" kind="show" id="Bxa-TW-PR0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wit-3m-nag">
                                 <rect key="frame" x="37" y="547" width="301" height="46"/>
@@ -131,6 +134,9 @@
                                 <state key="normal" image="buttonMyPacts">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="utS-2j-i5h" kind="show" id="VD9-kV-KV0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Pact was sent to others for signing!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO9-iL-g2C">
                                 <rect key="frame" x="82" y="199" width="211" height="134"/>
@@ -199,7 +205,7 @@
                                                 <rect key="frame" x="0.0" y="92" width="375" height="127"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oHk-PT-prd" id="lkl-AH-BGx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="126.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-5D-rOd">
@@ -335,6 +341,9 @@
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="GbH-z1-p3f"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfL-n1-a27">
                                         <rect key="frame" x="-21" y="585" width="471" height="82"/>
@@ -468,6 +477,9 @@
                                         <rect key="frame" x="139" y="547" width="96" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="newButton" image="newButton"/>
+                                        <connections>
+                                            <segue destination="M59-Nk-gG7" kind="show" id="qpt-Uf-dKA"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No pacts made?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZA-SC-fAP">
                                         <rect key="frame" x="85" y="287.5" width="204" height="27.5"/>
@@ -648,6 +660,9 @@ description for your Pact</string>
                                 <rect key="frame" x="-27" y="585" width="429" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="nextStepButton"/>
+                                <connections>
+                                    <segue destination="MG4-H9-WGp" kind="show" id="8eJ-iR-V01"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -758,6 +773,9 @@ description for your Pact</string>
                                 <state key="normal" image="buttonOkay">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="utS-2j-i5h" kind="show" id="8YV-mU-ez8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your new Pactr account is ready!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INA-jl-A9g">
                                 <rect key="frame" x="82" y="209" width="211" height="134"/>
@@ -790,4 +808,7 @@ description for your Pact</string>
         <image name="shakeHands" width="113" height="65"/>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VD9-kV-KV0"/>
+    </inferredMetricsTieBreakers>
 </document>
