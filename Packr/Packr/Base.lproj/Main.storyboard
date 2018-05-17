@@ -135,7 +135,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="utS-2j-i5h" kind="show" id="VD9-kV-KV0"/>
+                                    <segue destination="taY-vb-b2j" kind="show" id="WnA-x0-uGl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Pact was sent to others for signing!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO9-iL-g2C">
@@ -257,6 +257,9 @@
                                                     </subviews>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <segue destination="S6K-0M-P4j" kind="show" id="4nX-A3-7zG"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -349,6 +352,9 @@
                                         <rect key="frame" x="-21" y="585" width="471" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="nextStepButton"/>
+                                        <connections>
+                                            <segue destination="8hQ-5h-iJj" kind="show" id="rZ8-2C-PTA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xh-HP-S10">
                                         <rect key="frame" x="0.0" y="501" width="367" height="90"/>
@@ -478,7 +484,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="newButton" image="newButton"/>
                                         <connections>
-                                            <segue destination="M59-Nk-gG7" kind="show" id="qpt-Uf-dKA"/>
+                                            <segue destination="M59-Nk-gG7" kind="show" id="t5e-5B-qqd"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No pacts made?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZA-SC-fAP">
@@ -593,10 +599,10 @@
             </objects>
             <point key="canvasLocation" x="6881" y="152"/>
         </scene>
-        <!--View Controller-->
+        <!--Step1 View Controller-->
         <scene sceneID="W0u-5Q-aYa">
             <objects>
-                <viewController id="M59-Nk-gG7" sceneMemberID="viewController">
+                <viewController id="M59-Nk-gG7" customClass="Step1ViewController" customModule="Packr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m92-jc-5CO"/>
                         <viewControllerLayoutGuide type="bottom" id="kXe-MA-CqY"/>
@@ -661,21 +667,25 @@ description for your Pact</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="nextStepButton"/>
                                 <connections>
-                                    <segue destination="MG4-H9-WGp" kind="show" id="8eJ-iR-V01"/>
+                                    <segue destination="MG4-H9-WGp" kind="show" identifier="Step2" id="8eJ-iR-V01"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="pactDescrInput" destination="pPe-ou-2FO" id="b8N-tg-3gl"/>
+                        <outlet property="pactNameInput" destination="76e-gx-iim" id="yXu-8Y-sdZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itj-oe-WK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2255" y="152"/>
+            <point key="canvasLocation" x="2276" y="-32"/>
         </scene>
-        <!--View Controller-->
+        <!--Step2 View Controller-->
         <scene sceneID="9J5-u2-yPF">
             <objects>
-                <viewController id="MG4-H9-WGp" sceneMemberID="viewController">
+                <viewController id="MG4-H9-WGp" customClass="Step2ViewController" customModule="Packr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xEb-He-iw1"/>
                         <viewControllerLayoutGuide type="bottom" id="wNM-Jq-e0X"/>
@@ -727,6 +737,9 @@ description for your Pact</string>
                                         <rect key="frame" x="-27" y="585" width="429" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="nextStepButton"/>
+                                        <connections>
+                                            <segue destination="mRP-CE-BZj" kind="show" identifier="Step3" id="Flk-db-b5O"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-nG-ncH">
                                         <rect key="frame" x="281" y="356" width="78" height="28"/>
@@ -739,6 +752,9 @@ description for your Pact</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="pactPeopleInput" destination="TxU-p6-Gh4" id="6Sy-JU-6Ty"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7U-Kb-SI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -792,10 +808,10 @@ description for your Pact</string>
             </objects>
             <point key="canvasLocation" x="230" y="-362"/>
         </scene>
-        <!--View Controller-->
+        <!--Step3 View Controller-->
         <scene sceneID="Iig-u9-qi6">
             <objects>
-                <viewController id="mRP-CE-BZj" sceneMemberID="viewController">
+                <viewController id="mRP-CE-BZj" customClass="Step3ViewController" customModule="Packr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rjc-7l-P1k"/>
                         <viewControllerLayoutGuide type="bottom" id="Zwv-e7-lmR"/>
@@ -840,6 +856,10 @@ description for your Pact</string>
                                         <rect key="frame" x="-27" y="585" width="429" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="nextStepButton"/>
+                                        <connections>
+                                            <action selector="addPact:" destination="mRP-CE-BZj" eventType="touchUpInside" id="FPh-5F-dQz"/>
+                                            <segue destination="MXM-oB-BuO" kind="show" identifier="Confirmation" id="u2M-28-At9"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yh1-p9-zX7">
                                         <rect key="frame" x="20" y="328" width="335" height="115"/>
@@ -878,7 +898,7 @@ description for your Pact</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSr-WY-9zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4057" y="152"/>
+            <point key="canvasLocation" x="4145" y="161"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uNL-Ye-Mo6">
@@ -990,7 +1010,4 @@ description for your Pact</string>
         <image name="shakeHands" width="113" height="65"/>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="8YV-mU-ez8"/>
-    </inferredMetricsTieBreakers>
 </document>

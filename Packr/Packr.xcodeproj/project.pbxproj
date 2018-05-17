@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D31B2E820AD820100D67844 /* Pact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31B2E720AD820100D67844 /* Pact.swift */; };
+		6D31B2EA20AD844900D67844 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D31B2E920AD844900D67844 /* Storage.swift */; };
+		6D92EBDC20AD86ED00A9B384 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D92EBDB20AD86ED00A9B384 /* User.swift */; };
+		6D92EBDE20AD89FF00A9B384 /* Step1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D92EBDD20AD89FF00A9B384 /* Step1ViewController.swift */; };
+		6D92EBE020AD903800A9B384 /* Step3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D92EBDF20AD903800A9B384 /* Step3ViewController.swift */; };
+		6D92EBE220AD916400A9B384 /* Step2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D92EBE120AD916400A9B384 /* Step2ViewController.swift */; };
 		8C391A382090A6A000E06186 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C391A372090A6A000E06186 /* AppDelegate.swift */; };
 		8C391A3A2090A6A000E06186 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C391A392090A6A000E06186 /* ViewController.swift */; };
 		8C391A3D2090A6A000E06186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C391A3B2090A6A000E06186 /* Main.storyboard */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D31B2E720AD820100D67844 /* Pact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pact.swift; sourceTree = "<group>"; };
+		6D31B2E920AD844900D67844 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		6D92EBDB20AD86ED00A9B384 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6D92EBDD20AD89FF00A9B384 /* Step1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step1ViewController.swift; sourceTree = "<group>"; };
+		6D92EBDF20AD903800A9B384 /* Step3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step3ViewController.swift; sourceTree = "<group>"; };
+		6D92EBE120AD916400A9B384 /* Step2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step2ViewController.swift; sourceTree = "<group>"; };
 		8C391A342090A6A000E06186 /* Packr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Packr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C391A372090A6A000E06186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C391A392090A6A000E06186 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +111,14 @@
 			children = (
 				8C391A372090A6A000E06186 /* AppDelegate.swift */,
 				8C391A392090A6A000E06186 /* ViewController.swift */,
+				6D31B2E720AD820100D67844 /* Pact.swift */,
 				FC19E75320931A600066E800 /* image.xcassets */,
+				6D92EBDB20AD86ED00A9B384 /* User.swift */,
 				8C391A3B2090A6A000E06186 /* Main.storyboard */,
+				6D92EBDD20AD89FF00A9B384 /* Step1ViewController.swift */,
+				6D92EBE120AD916400A9B384 /* Step2ViewController.swift */,
+				6D92EBDF20AD903800A9B384 /* Step3ViewController.swift */,
+				6D31B2E920AD844900D67844 /* Storage.swift */,
 				8C391A402090A6A000E06186 /* LaunchScreen.storyboard */,
 				8C391A432090A6A000E06186 /* Info.plist */,
 			);
@@ -259,8 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D92EBDE20AD89FF00A9B384 /* Step1ViewController.swift in Sources */,
+				6D92EBE220AD916400A9B384 /* Step2ViewController.swift in Sources */,
 				8C391A3A2090A6A000E06186 /* ViewController.swift in Sources */,
+				6D92EBE020AD903800A9B384 /* Step3ViewController.swift in Sources */,
+				6D31B2EA20AD844900D67844 /* Storage.swift in Sources */,
 				8C391A382090A6A000E06186 /* AppDelegate.swift in Sources */,
+				6D92EBDC20AD86ED00A9B384 /* User.swift in Sources */,
+				6D31B2E820AD820100D67844 /* Pact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
