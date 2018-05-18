@@ -13,8 +13,8 @@ class Step1ViewController: UIViewController  {
     //MARK: Properties
     
     @IBOutlet weak var pactNameInput: UITextField!
-    @IBOutlet weak var pactDescrInput: UITextField!
-   
+    @IBOutlet weak var pactDescrText: UITextView!
+    
 
     
     
@@ -35,7 +35,7 @@ class Step1ViewController: UIViewController  {
             let secondViewController = segue.destination as! Step2ViewController
             
             secondViewController.newPactName = pactNameInput.text!
-            secondViewController.newPactDescr = pactDescrInput.text!
+            secondViewController.newPactDescr = pactDescrText.text!
         }
     }
 
