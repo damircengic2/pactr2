@@ -14,7 +14,9 @@ class Step1ViewController: UIViewController  {
     
     @IBOutlet weak var pactNameInput: UITextField!
     @IBOutlet weak var pactDescrText: UITextView!
-    
+    @IBAction func addPact(_ sender: Any) {
+        self.performSegue(withIdentifier:"Step2", sender: prepare)
+    }
 
     
     
@@ -29,14 +31,9 @@ class Step1ViewController: UIViewController  {
     }
     
     
-    @IBAction func addPact(_ sender: Any) {
-        func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject?) {
-            
-            let secondViewController = segue.destination as! Step2ViewController
-            
-            secondViewController.newPactName = pactNameInput.text!
-            secondViewController.newPactDescr = pactDescrText.text!
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as? Step2ViewController
+        controller?.newPactName = pactNameInput.text!
+        controller?.newPactDescr = pactDescrText.text!
     }
-
 }
