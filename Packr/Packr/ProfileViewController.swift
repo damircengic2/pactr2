@@ -17,16 +17,17 @@ class ProfileViewController: UIViewController{
     
     @IBAction func signOutButton(_ sender: Any) {
         
-        
+        if Auth.auth().currentUser != nil {
         try! Auth.auth().signOut()
         self.performSegue(withIdentifier: "segueIfLogoutSuceeded", sender: self)
+        }
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userEmail = (Auth.auth().currentUser?.email)!
-        userEmailLabel.text! = userEmail
+    
+    
 
         // Do any additional setup after loading the view, typically from a nib.
     }

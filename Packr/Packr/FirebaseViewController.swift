@@ -48,39 +48,30 @@ class FirebaseViewController: UIViewController{
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
-        if emailInput.text != "" && passInput.text != ""
-        {
-            Auth.auth().signIn(withEmail: emailInput.text!, password: passInput.text!, completion: { (user, error ) in
-                
+        if emailInput.text != "" && passInput.text != ""{
+            
+            Auth.auth().signIn(withEmail: emailInput.text!, password: passInput.text!, completion: { (user, error)  in
                 if user != nil{
-                    if (Auth.auth().currentUser?.isEmailVerified)!{
-                        
-                    
-                    self.performSegue(withIdentifier: "segueIfLoginSuceeded", sender: self)
-                    }else {
-                        let myError = "E-mail is not verified. Check you inbox!"
-                        self.labelError.text! = myError
-                    }
-                }else {
-                    if let myError = error?.localizedDescription{
-                        self.labelError.text! = myError
-                        
+                    if (user?.isEmailVerified)!{
+                        self.performSegue(withIdentifier: "Login", sender: self)
+                        self.labelError.text! = ""
                     }else{
-                        print ("ERROR")
+                        self.labelError.text! = "Please verify your e-mail!"
+                    }
+                }else{
+                    if let myError = error?.localizedDescription{
+                        self.labelError.text = myError
+                    }else{
+                        print("ERROR")
                     }
                 }
-            
             })
+//            performSegue(withIdentifier: "segueLogin", sender: self)
+        }else{
+            self.labelError.text = "Please enter your creditentials!"
         }
     }
     
-    @IBOutlet var fbLoginButton: UIButton!
-    
-    @IBAction func fbLoginButton(_ sender: UIButton) {
-        
-    
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

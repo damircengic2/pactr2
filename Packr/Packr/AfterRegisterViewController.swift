@@ -27,13 +27,14 @@ class AfterRegisterViewController: UIViewController{
             Auth.auth().signIn(withEmail: emailInput.text!, password: passInput.text!, completion: { (user, error ) in
                 
                 if user != nil{
-                    if (Auth.auth().currentUser?.isEmailVerified)!{
-                        
+                    if (user?.isEmailVerified)!{
                         
                         self.performSegue(withIdentifier: "segueIfLoginAfterRegisterSuceeded", sender: self)
+                        self.labelError!.text = ""
+                    
                     }else {
-                        let myError = "E-mail is not verified. Check you inbox!"
-                        self.labelError.text! = myError
+                        self.labelError.text! = "E-mail is not verified. Check you inbox!"
+                        
                     }
                 }else {
                     if let myError = error?.localizedDescription{
@@ -45,6 +46,8 @@ class AfterRegisterViewController: UIViewController{
                 }
                 
             })
+        }else{
+            labelError.text = "Please enter your creditentials!"
         }
 
         
