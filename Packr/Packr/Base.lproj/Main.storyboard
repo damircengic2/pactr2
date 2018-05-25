@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="utS-2j-i5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -440,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuT-X8-3hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4368.8000000000002" y="388.15592203898052"/>
+            <point key="canvasLocation" x="1230" y="-609"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Y4u-sk-7V1">
@@ -490,7 +490,7 @@
                                                 <rect key="frame" x="0.0" y="92" width="375" height="127"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oHk-PT-prd" id="lkl-AH-BGx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="126.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-5D-rOd">
@@ -708,6 +708,9 @@
                                                 <state key="normal" title="Profile">
                                                     <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="I7Q-c1-ze2" kind="show" id="Z8G-b9-xGa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcD-yp-5xB">
                                                 <rect key="frame" x="19" y="20" width="40" height="21"/>
@@ -1265,6 +1268,6 @@ description for your Pact</string>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xfm-UM-ck4"/>
+        <segue reference="NK3-Ee-n0g"/>
     </inferredMetricsTieBreakers>
 </document>
