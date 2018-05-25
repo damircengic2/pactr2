@@ -263,7 +263,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="@" translatesAutoresizingMaskIntoConstraints="NO" id="p6J-cu-kCw">
                                 <rect key="frame" x="43" y="221" width="21" height="20"/>
@@ -303,7 +303,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lock" translatesAutoresizingMaskIntoConstraints="NO" id="PgG-8I-wp8">
                                 <rect key="frame" x="48" y="317" width="16" height="20"/>
@@ -380,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="3196" y="223"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="q88-VR-FIq">
             <objects>
-                <viewController id="I7Q-c1-ze2" sceneMemberID="viewController">
+                <viewController id="I7Q-c1-ze2" customClass="ProfileViewController" customModule="Packr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tRQ-9S-xgL"/>
                         <viewControllerLayoutGuide type="bottom" id="Ybr-ys-Ogs"/>
@@ -392,32 +392,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="QI7-id-ekU">
-                                <rect key="frame" x="10" y="290" width="355" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="L5o-k6-bVe">
-                                <rect key="frame" x="10" y="397" width="355" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jT-xK-cpt">
-                                <rect key="frame" x="40" y="265" width="60" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jane Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLq-gG-ccw">
-                                <rect key="frame" x="112" y="181" width="150.00000000000091" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hey," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLq-gG-ccw">
+                                <rect key="frame" x="112" y="181" width="150" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="28"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-84-90y">
-                                <rect key="frame" x="40" y="370" width="84" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -425,21 +403,70 @@
                                 <rect key="frame" x="132" y="61" width="108.99999999999955" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SaveChangesBtn" translatesAutoresizingMaskIntoConstraints="NO" id="tUu-Bn-996">
-                                <rect key="frame" x="0.0" y="593" width="375" height="74"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVE-Rd-GHr">
+                                <rect key="frame" x="0.0" y="600" width="375" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackButton" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-ln-Dtq">
-                                <rect key="frame" x="0.0" y="20" width="70" height="57"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZt-IY-v68">
+                                        <rect key="frame" x="67" y="15" width="39" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Pacts">
+                                            <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="utS-2j-i5h" kind="show" id="Zj2-LU-xSp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-7a-KA7">
+                                        <rect key="frame" x="309" y="15" width="44" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Profile">
+                                            <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-bz-dBO">
+                                        <rect key="frame" x="19" y="20" width="40" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" image="paleHands"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELk-mF-C4h">
+                                        <rect key="frame" x="282" y="15" width="19" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="littleGuy"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jT-xK-cpt">
+                                <rect key="frame" x="30" y="263" width="313" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZa-tG-Kik">
+                                <rect key="frame" x="144" y="488" width="84" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Sign out">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutButton:" destination="utS-2j-i5h" eventType="touchUpInside" id="aNN-gL-nfb"/>
+                                    <segue destination="4Ip-8a-aQR" kind="show" identifier="segueIfLogoutSuceeded" id="C31-dz-Dgw"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.9565467231" green="0.94993313430000004" blue="0.95137662850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="userEmail" destination="7jT-xK-cpt" id="YTg-0I-Wt7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuT-X8-3hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="-609"/>
+            <point key="canvasLocation" x="-948" y="1813.9430284857572"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Y4u-sk-7V1">
@@ -708,7 +735,7 @@
                                                     <color key="titleColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="I7Q-c1-ze2" kind="show" id="Z8G-b9-xGa"/>
+                                                    <segue destination="I7Q-c1-ze2" kind="show" id="yTk-ci-Nm9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcD-yp-5xB">
@@ -772,15 +799,6 @@
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZa-tG-Kik">
-                                        <rect key="frame" x="157" y="433" width="61" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Sign out"/>
-                                        <connections>
-                                            <action selector="signOutButton:" destination="utS-2j-i5h" eventType="touchUpInside" id="aNN-gL-nfb"/>
-                                            <segue destination="4Ip-8a-aQR" kind="show" identifier="segueIfLogoutSuceeded" id="C31-dz-Dgw"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.53718126919999998" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -790,7 +808,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBj-N0-Btj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-188" y="937"/>
+            <point key="canvasLocation" x="-188" y="936.88155922038993"/>
         </scene>
         <!--Step1 View Controller-->
         <scene sceneID="W0u-5Q-aYa">
@@ -1257,7 +1275,6 @@ description for your Pact</string>
         <image name="LoginEmailAndPassword" width="276" height="96"/>
         <image name="LoginFacebook" width="276" height="96"/>
         <image name="ProfileIcon" width="88" height="88"/>
-        <image name="SaveChangesBtn" width="375" height="82"/>
         <image name="SignIcon" width="36" height="34"/>
         <image name="Step1" width="40" height="40"/>
         <image name="Step2" width="40" height="40"/>
@@ -1268,16 +1285,18 @@ description for your Pact</string>
         <image name="handShake1" width="33" height="19"/>
         <image name="icon" width="19" height="23"/>
         <image name="illustrationEmpty" width="96" height="91"/>
+        <image name="littleGuy" width="19" height="23"/>
         <image name="newButton" width="96" height="96"/>
         <image name="nextStepButton" width="375" height="82"/>
         <image name="pactrLogo" width="158" height="181"/>
+        <image name="paleHands" width="33" height="19"/>
         <image name="profile2" width="24" height="28"/>
         <image name="shakeHands" width="113" height="65"/>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZaQ-Bq-cf7"/>
-        <segue reference="XB8-YB-1z5"/>
         <segue reference="Iyn-d2-fiz"/>
+        <segue reference="ZaQ-Bq-cf7"/>
+        <segue reference="C31-dz-Dgw"/>
     </inferredMetricsTieBreakers>
 </document>

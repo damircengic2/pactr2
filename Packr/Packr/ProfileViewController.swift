@@ -11,8 +11,11 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController{
     
-    @IBOutlet var userEmailLabel: UILabel!
-    var userEmail: String = ""
+    
+    
+    @IBOutlet var userEmail: UILabel!
+    
+    
     
     
     @IBAction func signOutButton(_ sender: Any) {
@@ -20,13 +23,18 @@ class ProfileViewController: UIViewController{
         if Auth.auth().currentUser != nil {
         try! Auth.auth().signOut()
         self.performSegue(withIdentifier: "segueIfLogoutSuceeded", sender: self)
+        userEmail.text! = ""
+            
         }
         
     }
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-    
+        if let text = userEmail{
+            text.text! = (Auth.auth().currentUser?.email)!
+        }
+        
+    super.viewDidLoad()
     
 
         // Do any additional setup after loading the view, typically from a nib.
