@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626" y="161"/>
+            <point key="canvasLocation" x="-1654" y="151"/>
         </scene>
         <!--Firebase View Controller-->
         <scene sceneID="2YD-wo-IXc">
@@ -1009,14 +1009,14 @@ description for your Pact</string>
                                     <segue destination="3Xw-0h-496" kind="show" id="kwh-ne-dm6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your new Pactr account is ready!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INA-jl-A9g">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your new Pactr account is ready!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INA-jl-A9g">
                                 <rect key="frame" x="82" y="220" width="211" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now you can create pacts with your friends and colleagues." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWl-va-8ZU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now you can create pacts with your friends and colleagues." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWl-va-8ZU">
                                 <rect key="frame" x="71" y="376" width="233" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -1276,12 +1276,8 @@ description for your Pact</string>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="Iyn-d2-fiz"/>
-        <segue reference="GbH-z1-p3f"/>
+        <segue reference="ZaQ-Bq-cf7"/>
         <segue reference="XB8-YB-1z5"/>
-=======
-        <segue reference="NK3-Ee-n0g"/>
->>>>>>> eafe2e0e9bcee3bd1a28793ad59d4f4e63d35e7f
+        <segue reference="Iyn-d2-fiz"/>
     </inferredMetricsTieBreakers>
 </document>
