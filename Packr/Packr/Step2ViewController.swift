@@ -14,6 +14,9 @@ var newPactName = ""
 var newPactDescr = ""
     
     @IBOutlet weak var pactPeopleInput: UITextField!
+    @IBAction func addPact(_ sender: Any) {
+        self.performSegue(withIdentifier:"Step3", sender: prepare)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +29,11 @@ var newPactDescr = ""
     }
     
     
-    @IBAction func addPact(_ sender: Any) {
-        func prepareForSegue(segue:UIStoryboardSegue, sender: AnyObject?) {
-            
-            let secondViewController = segue.destination as! Step3ViewController
-            
-            secondViewController.newPactName = newPactName
-            secondViewController.newPactDescr = newPactDescr
-            secondViewController.newPactPeople = pactPeopleInput.text!
-            
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as? Step3ViewController
+        controller?.newPactName = newPactName
+        controller?.newPactDescr = newPactDescr
+        controller?.newPactPeople = pactPeopleInput.text!
+        
     }
-
 }
