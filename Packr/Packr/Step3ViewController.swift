@@ -13,6 +13,7 @@ class Step3ViewController: UIViewController  {
     var newPactDescr = ""
     var newPactPeople = ""
     var newPactState = "new"
+    var newPactTime = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class Step3ViewController: UIViewController  {
     
     @IBAction func addPact(_ sender: Any) {
         
-       let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState)
+        let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState, pactTime: newPactTime)
         Storage.shared.objects.append(newPact)
         performSegue(withIdentifier: "Confirmation", sender: self)
     }
