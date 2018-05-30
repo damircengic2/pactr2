@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="utS-2j-i5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M59-Nk-gG7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -389,14 +389,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="MpF-1H-gwD" kind="relationship" relationship="rootViewController" id="dbM-YE-fUe"/>
+                        <segue destination="o65-IH-kA7" kind="relationship" relationship="rootViewController" id="GWb-b6-M7s"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeE-gg-wSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4055" y="223"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="q88-VR-FIq">
             <objects>
                 <viewController id="I7Q-c1-ze2" customClass="ProfileViewController" customModule="Packr" customModuleProvider="target" sceneMemberID="viewController">
@@ -476,6 +476,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.9565467231" green="0.94993313430000004" blue="0.95137662850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="Profile" id="ccX-VC-jpK"/>
                     <connections>
                         <outlet property="userEmail" destination="7jT-xK-cpt" id="YTg-0I-Wt7"/>
                     </connections>
@@ -484,7 +485,7 @@
             </objects>
             <point key="canvasLocation" x="-948" y="1813.9430284857572"/>
         </scene>
-        <!--My Pacts View Controller-->
+        <!--Pacts-->
         <scene sceneID="NGi-Ws-hdj">
             <objects>
                 <tableViewController id="MpF-1H-gwD" customClass="MyPactsViewController" customModule="Packr" customModuleProvider="target" sceneMemberID="viewController">
@@ -555,11 +556,31 @@
                             <outlet property="delegate" destination="MpF-1H-gwD" id="Dh8-bP-KpT"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Pacts" selectedImage="paleHands" id="MbV-XJ-R7g"/>
                     <navigationItem key="navigationItem" id="0nR-6o-o2k"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1l-2m-5Oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3321" y="985"/>
+            <point key="canvasLocation" x="4980" y="1001"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aCI-UA-gcM">
+            <objects>
+                <tabBarController id="o65-IH-kA7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="A0h-1c-rzN"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="HXQ-BV-C0j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MpF-1H-gwD" kind="relationship" relationship="viewControllers" id="mDo-8u-49i"/>
+                        <segue destination="I7Q-c1-ze2" kind="relationship" relationship="viewControllers" id="Rgp-Hz-MpM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNo-mb-4qD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4054" y="1001"/>
         </scene>
         <!--Firebase View Controller-->
         <scene sceneID="RRD-8j-vPT">
@@ -1149,7 +1170,6 @@ description for your Pact</string>
         <!--Pact View Controller-->
         <scene sceneID="uNL-Ye-Mo6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0aX-S3-oQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="S6K-0M-P4j" customClass="PactViewController" customModule="Packr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A1e-pw-xUV"/>
@@ -1241,8 +1261,9 @@ description for your Pact</string>
                         <outlet property="pactTimeLabel" destination="8Sq-aM-uAd" id="gdl-bM-mnw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aX-S3-oQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4112.8000000000002" y="984.55772113943033"/>
+            <point key="canvasLocation" x="5870" y="1001"/>
         </scene>
     </scenes>
     <resources>
@@ -1254,6 +1275,7 @@ description for your Pact</string>
         <image name="Lock" width="15" height="20"/>
         <image name="LoginEmailAndPassword" width="276" height="96"/>
         <image name="LoginFacebook" width="276" height="96"/>
+        <image name="Profile" width="19" height="23"/>
         <image name="ProfileIcon" width="88" height="88"/>
         <image name="SignIcon" width="36" height="34"/>
         <image name="Step1" width="40" height="40"/>
@@ -1275,8 +1297,9 @@ description for your Pact</string>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZaQ-Bq-cf7"/>
+        <segue reference="Zj2-LU-xSp"/>
+        <segue reference="yTk-ci-Nm9"/>
         <segue reference="C31-dz-Dgw"/>
-        <segue reference="Iyn-d2-fiz"/>
+        <segue reference="ZaQ-Bq-cf7"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -22,8 +22,9 @@ class MyPactsViewController: UITableViewController {
         
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
-    
  
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 128;
     }
     
     override func viewWillAppear(_ animated: Bool) {
