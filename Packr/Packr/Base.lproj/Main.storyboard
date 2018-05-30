@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M59-Nk-gG7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Ip-8a-aQR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -385,7 +385,7 @@
             <objects>
                 <navigationController id="YaT-mX-AuZ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CkM-y6-lyL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -498,7 +498,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oHk-PT-prd" id="lkl-AH-BGx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="127.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-5D-rOd">
@@ -847,10 +847,14 @@ description for your Pact</string>
                                         <rect key="frame" x="40" y="73" width="39" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackButton" translatesAutoresizingMaskIntoConstraints="NO" id="now-X5-VzQ">
-                                        <rect key="frame" x="0.0" y="8" width="70" height="57"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flp-N6-KFr">
+                                        <rect key="frame" x="14" y="11" width="34" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="utS-2j-i5h" kind="show" id="nT7-zy-sUq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -945,10 +949,14 @@ description for your Pact</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackButton" translatesAutoresizingMaskIntoConstraints="NO" id="OWj-zH-aYc">
-                                                <rect key="frame" x="0.0" y="9" width="70" height="57"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmd-Hr-QVJ">
+                                                <rect key="frame" x="14" y="12" width="34" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <segue destination="M59-Nk-gG7" kind="show" id="gF3-d1-kho"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -1091,10 +1099,14 @@ description for your Pact</string>
                                                 <rect key="frame" x="40" y="73" width="39" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackButton" translatesAutoresizingMaskIntoConstraints="NO" id="XuV-gf-ugB">
-                                                <rect key="frame" x="0.0" y="8" width="70" height="57"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NH-Cp-Ucu">
+                                                <rect key="frame" x="14" y="11" width="34" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <segue destination="MG4-H9-WGp" kind="show" id="GZy-Yh-7B9"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -1268,7 +1280,6 @@ description for your Pact</string>
     </scenes>
     <resources>
         <image name="@" width="18" height="20"/>
-        <image name="BackButton" width="20" height="16"/>
         <image name="BoardBG" width="371" height="192"/>
         <image name="DraftIcon" width="32" height="32"/>
         <image name="FieldBG" width="371" height="104"/>
@@ -1297,9 +1308,11 @@ description for your Pact</string>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zj2-LU-xSp"/>
+        <segue reference="GZy-Yh-7B9"/>
+        <segue reference="gF3-d1-kho"/>
+        <segue reference="IZO-DQ-4kM"/>
         <segue reference="yTk-ci-Nm9"/>
-        <segue reference="C31-dz-Dgw"/>
+        <segue reference="XB8-YB-1z5"/>
         <segue reference="ZaQ-Bq-cf7"/>
     </inferredMetricsTieBreakers>
 </document>
