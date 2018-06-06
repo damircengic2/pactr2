@@ -17,6 +17,7 @@ class PactUITableCell: UITableViewCell {
     var pactTime:Date = Date()
 
     @IBOutlet weak var pactNameLabel: UILabel!
+    @IBOutlet weak var pactStateLabel: UILabel!
     
 
     
