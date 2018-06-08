@@ -17,6 +17,7 @@ class FirebaseViewController: UIViewController{
     
     @IBOutlet var registerEmailInput: UITextField!
     @IBOutlet var registerPassInput: UITextField!
+    @IBOutlet var passConfirmInput: UITextField!
     
     
     @IBOutlet var registerButton: UIButton!
@@ -33,7 +34,11 @@ class FirebaseViewController: UIViewController{
     
     
     @IBAction func registerButton(_ sender: UIButton) {
-        if registerEmailInput.text! != "" && registerPassInput.text! != "" {
+        if registerEmailInput.text! != "" && registerPassInput.text! != "" && passConfirmInput.text! != ""
+        {
+            if registerPassInput.text! != passConfirmInput.text! {
+                self.registerLabelError.text! = "Password does not match!"
+            } else {
             Auth.auth().createUser(withEmail: registerEmailInput.text!, password: registerPassInput.text!, completion: { (user, error ) in if user != nil{
                 let currUser = Auth.auth().currentUser
                     currUser?.sendEmailVerification(completion: nil)
@@ -41,12 +46,18 @@ class FirebaseViewController: UIViewController{
                             }else{
                 if let myError = error?.localizedDescription{
                     self.registerLabelError.text! = myError
-                }else{
+                }
+                else{
                     print("ERROR")
                 }
                 }
             })
+            }
+            
+        }else {
+            self.registerLabelError.text! = "Please enter creditentials!"
         }
+        
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
@@ -102,7 +113,6 @@ class FirebaseViewController: UIViewController{
             self.performSegue(withIdentifier: "segueFacebookLogin", sender: self)
             print ("Sucessfully authenticated with Firebase")
             print (Auth.auth().currentUser?.uid as Any)
-            //self.dismiss(animated: true, completion: nil)
     }
     }
     
