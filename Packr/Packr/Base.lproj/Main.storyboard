@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="utS-2j-i5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -156,6 +156,9 @@
                                 <rect key="frame" x="28" y="524" width="319" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="LoginFacebook"/>
+                                <connections>
+                                    <action selector="FBLoginButton:" destination="4Ip-8a-aQR" eventType="touchUpInside" id="aV5-u5-6Qb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPP-lZ-eyU">
                                 <rect key="frame" x="77" y="223" width="257" height="30"/>
@@ -467,6 +470,14 @@
                                 </state>
                                 <connections>
                                     <action selector="signOutButton:" destination="utS-2j-i5h" eventType="touchUpInside" id="aNN-gL-nfb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhy-ll-7J9">
+                                <rect key="frame" x="16" y="72" width="35" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BackButton"/>
+                                <connections>
+                                    <segue destination="4Ip-8a-aQR" kind="show" identifier="backToLogin" id="09r-8i-tw2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -6256,11 +6267,11 @@ AEEAAAAAAAAAAAAAAAAAACNMA
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hiL-JV-ehH"/>
+        <segue reference="IZO-DQ-4kM"/>
         <segue reference="K8r-iD-hKQ"/>
-        <segue reference="Zj2-LU-xSp"/>
-        <segue reference="yTk-ci-Nm9"/>
+        <segue reference="hiL-JV-ehH"/>
         <segue reference="t5e-5B-qqd"/>
+        <segue reference="yTk-ci-Nm9"/>
         <segue reference="n52-HT-nVX"/>
     </inferredMetricsTieBreakers>
 </document>
