@@ -473,14 +473,6 @@
                                     <action selector="signOutButton:" destination="utS-2j-i5h" eventType="touchUpInside" id="aNN-gL-nfb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhy-ll-7J9">
-                                <rect key="frame" x="16" y="72" width="35" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="BackButton"/>
-                                <connections>
-                                    <segue destination="4Ip-8a-aQR" kind="show" identifier="backToLogin" id="09r-8i-tw2"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9565467231" green="0.94993313430000004" blue="0.95137662850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -985,19 +977,19 @@ description for your Pact</string>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyY-i5-uXs">
-                                        <rect key="frame" x="-27" y="585" width="429" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="nextStepButton"/>
-                                        <connections>
-                                            <action selector="addPact:" destination="M59-Nk-gG7" eventType="touchUpInside" id="dsJ-Fy-Wkm"/>
-                                            <segue destination="mRP-CE-BZj" kind="show" identifier="Step3" id="ORE-L4-Wxz"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile2" translatesAutoresizingMaskIntoConstraints="NO" id="2aG-xK-XV2">
                                         <rect key="frame" x="302" y="331" width="24" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oaq-ZD-e7f">
+                                        <rect key="frame" x="0.0" y="585" width="429" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="nextStepButton"/>
+                                        <connections>
+                                            <action selector="addPact:" destination="MG4-H9-WGp" eventType="touchUpInside" id="O5W-z9-2HJ"/>
+                                            <segue destination="mRP-CE-BZj" kind="show" identifier="Step3" id="M5V-Hr-6sz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
@@ -1289,7 +1281,7 @@ description for your Pact</string>
 
         <segue reference="n52-HT-nVX"/>
         <segue reference="27R-ob-Luf"/>
-        <segue reference="NkS-dl-LSU"/>
+        <segue reference="Zj2-LU-xSp"/>
         <segue reference="yTk-ci-Nm9"/>
         <segue reference="K8r-iD-hKQ"/>
         <segue reference="hiL-JV-ehH"/>
