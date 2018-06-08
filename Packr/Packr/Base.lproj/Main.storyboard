@@ -186,17 +186,6 @@
                                 <color key="textColor" red="0.72045963196286467" green="0.0" blue="0.32217661463003866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su4-Ys-vWD">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ZaQ-Bq-cf7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IS-th-gSl">
                                 <rect key="frame" x="28" y="382" width="319" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -212,6 +201,14 @@
                                 <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CF1-Sl-aLW">
+                                <rect key="frame" x="16" y="28" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BackButton"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backToMainView" id="4Y7-l8-z73"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95654672305210831" green="0.94993313431694071" blue="0.95137662854175853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -225,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bss-Bx-hUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1265" y="937"/>
+            <point key="canvasLocation" x="-1266.4000000000001" y="936.88155922038993"/>
         </scene>
         <!--After Register View Controller-->
         <scene sceneID="vbq-zE-6LF">
@@ -470,7 +467,14 @@
                                 </state>
                                 <connections>
                                     <action selector="signOutButton:" destination="utS-2j-i5h" eventType="touchUpInside" id="aNN-gL-nfb"/>
-                                    <segue destination="4Ip-8a-aQR" kind="show" identifier="segueIfLogoutSuceeded" id="C31-dz-Dgw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtj-Ri-OjW">
+                                <rect key="frame" x="16" y="20" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BackButton"/>
+                                <connections>
+                                    <segue destination="4Ip-8a-aQR" kind="show" identifier="backToLogin" id="Dlm-Fx-Vvl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -656,17 +660,6 @@
                                         <rect key="frame" x="38" y="237" width="21" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whd-Ms-QT6">
-                                        <rect key="frame" x="19" y="28" width="38" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="GbH-z1-p3f"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-LV-nn8">
                                         <rect key="frame" x="19" y="411" width="336" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -674,6 +667,14 @@
                                         <color key="textColor" red="0.72045963199999996" green="0.0" blue="0.32217661460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1r-47-R9m">
+                                        <rect key="frame" x="8" y="28" width="28" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="BackButton"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="backToMain" id="fcS-hh-EMp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9565467231" green="0.94993313430000004" blue="0.95137662850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -796,6 +797,14 @@
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaX-fn-SVZ">
+                                        <rect key="frame" x="8" y="68" width="28" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="BackButton"/>
+                                        <connections>
+                                            <segue destination="4Ip-8a-aQR" kind="show" identifier="backToLog" id="K8r-iD-hKQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.53718126919999998" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -847,17 +856,17 @@ description for your Pact</string>
                                         <rect key="frame" x="40" y="73" width="39" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flp-N6-KFr">
-                                        <rect key="frame" x="14" y="11" width="34" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <segue destination="utS-2j-i5h" kind="show" id="nT7-zy-sUq"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me1-7o-QBr">
+                                <rect key="frame" x="10" y="10" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BackButton"/>
+                                <connections>
+                                    <segue destination="utS-2j-i5h" kind="show" identifier="backToProfile" id="NkS-dl-LSU"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type here..." textAlignment="natural" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="76e-gx-iim">
                                 <rect key="frame" x="28" y="352" width="323" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -949,12 +958,12 @@ description for your Pact</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmd-Hr-QVJ">
-                                                <rect key="frame" x="14" y="12" width="34" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cy-Jj-gf2">
+                                                <rect key="frame" x="8" y="28" width="28" height="27"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back"/>
+                                                <state key="normal" image="BackButton"/>
                                                 <connections>
-                                                    <segue destination="M59-Nk-gG7" kind="show" id="gF3-d1-kho"/>
+                                                    <segue destination="M59-Nk-gG7" kind="show" identifier="backToStep1" id="27R-ob-Luf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1099,17 +1108,17 @@ description for your Pact</string>
                                                 <rect key="frame" x="40" y="73" width="39" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NH-Cp-Ucu">
-                                                <rect key="frame" x="14" y="11" width="34" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back"/>
-                                                <connections>
-                                                    <segue destination="MG4-H9-WGp" kind="show" id="GZy-Yh-7B9"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyQ-6l-D5o">
+                                        <rect key="frame" x="10" y="10" width="28" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="BackButton"/>
+                                        <connections>
+                                            <segue destination="MG4-H9-WGp" kind="show" identifier="backToStep2" id="CGP-1w-jmr"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVL-PY-m5F">
                                         <rect key="frame" x="-27" y="585" width="429" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1280,6 +1289,7 @@ description for your Pact</string>
     </scenes>
     <resources>
         <image name="@" width="18" height="20"/>
+        <image name="BackButton" width="20" height="16"/>
         <image name="BoardBG" width="371" height="192"/>
         <image name="DraftIcon" width="32" height="32"/>
         <image name="FieldBG" width="371" height="104"/>
@@ -1308,11 +1318,11 @@ description for your Pact</string>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GZy-Yh-7B9"/>
-        <segue reference="gF3-d1-kho"/>
+        <segue reference="CGP-1w-jmr"/>
+        <segue reference="t5e-5B-qqd"/>
         <segue reference="IZO-DQ-4kM"/>
         <segue reference="yTk-ci-Nm9"/>
-        <segue reference="XB8-YB-1z5"/>
-        <segue reference="ZaQ-Bq-cf7"/>
+        <segue reference="K8r-iD-hKQ"/>
+        <segue reference="4Y7-l8-z73"/>
     </inferredMetricsTieBreakers>
 </document>
