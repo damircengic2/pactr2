@@ -15,15 +15,15 @@ class PactViewController: UIViewController {
     @IBOutlet weak var pactStateLabel: UILabel!
     @IBOutlet weak var pactPeopleLabel: UILabel!
     @IBOutlet weak var pactTimeLabel: UILabel!
-    
+
 
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = pactNameLabel {
-                label.text = detail.pactName            }
+                label.text! = detail.pactName            }
             if let label = pactDescrTextView {
-                label.text = detail.pactDescr
+                label.text! = detail.pactDescr
             }
             if let label = pactStateLabel {
                 label.text = detail.pactState

@@ -46,7 +46,7 @@ class MyPactsViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row]
-                let controller = (segue.destination as! UINavigationController).topViewController as! PactViewController
+                let controller = segue.destination as! PactViewController
                 controller.detailItem = object
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -69,6 +69,7 @@ class MyPactsViewController: UITableViewController {
         
         let object = Storage.shared.objects[indexPath.row]
         cell.pactNameLabel.text! = object.pactName
+        cell.pactStateLabel.text! = object.pactState
         
         cell.pactName = object.pactName
         cell.pactState = object.pactState
@@ -77,6 +78,10 @@ class MyPactsViewController: UITableViewController {
         cell.pactTime = object.pactTime
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 128
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
