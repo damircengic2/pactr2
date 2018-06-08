@@ -6,6 +6,7 @@
 //  Copyright © 2018 mini1. All rights reserved.
 //
 import UIKit
+import FirebaseDatabase
 
 class Step3ViewController: UIViewController  {
     
@@ -24,11 +25,20 @@ class Step3ViewController: UIViewController  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    var ref:DatabaseReference?
+    
+
     
     @IBAction func addPact(_ sender: Any) {
         
+        ref = Database.database().reference()
+        
         let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState, pactTime: newPactTime)
-        Storage.shared.objects.append(newPact)
+        
+
+        ref?.child("Pact").childByAutoId().setValue(newPact.asDictionary())
+        
+        //Storage.shared.objects.append(newPact)
         performSegue(withIdentifier: "Confirmation", sender: self)
     }
 }

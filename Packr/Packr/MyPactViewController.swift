@@ -7,12 +7,16 @@
 //
 
 import UIKit
-
+import FirebaseDatabase
 
 class MyPactsViewController: UITableViewController {
     
     var detailViewController: PactViewController? = nil
-    var objects = Storage.shared.objects
+    var objects:[Pact] = []
+    var handle: DatabaseHandle?
+    var ref: DatabaseReference?
+    
+    @IBOutlet var PactTableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -25,6 +29,9 @@ class MyPactsViewController: UITableViewController {
  
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 128;
+        ref = Database.database().reference()
+        //observing the data changes
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +79,7 @@ class MyPactsViewController: UITableViewController {
         cell.pactStateLabel.text! = object.pactState
         
         cell.pactName = object.pactName
-        cell.pactState = object.pactState
+        cell.pactDescr = object.pactDescr
         cell.pactPeople = object.pactPeople
         cell.pactState = object.pactState
         cell.pactTime = object.pactTime

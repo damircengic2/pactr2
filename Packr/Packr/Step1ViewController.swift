@@ -8,12 +8,16 @@
 
 import UIKit
 
+
 class Step1ViewController: UIViewController  {
 
     //MARK: Properties
     
     @IBOutlet weak var pactNameInput: UITextField!
     @IBOutlet weak var pactDescrText: UITextView!
+    
+    
+    
     @IBAction func addPact(_ sender: Any) {
         self.performSegue(withIdentifier:"Step2", sender: prepare)
     }

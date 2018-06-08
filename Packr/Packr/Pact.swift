@@ -27,4 +27,18 @@ class Pact {
         
     }
     
+   // pactName:String, pactDescr:String, pactState:String, pactPeople:String, pactTime:Date
+    
+    func asDictionary ()-> NSDictionary {
+        
+        let pactDictionary: NSDictionary = [
+        "pactName": pactName,
+        "pactDescr": pactDescr,
+        "pactPeople": pactPeople,
+        "pactState": pactState,
+        "pactTime": pactTime.toString(withFormat: "dd-MMM-yyyy")
+        ]
+        return pactDictionary
+    }
+    
 }

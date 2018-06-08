@@ -548,6 +548,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Pacts" selectedImage="paleHands" id="MbV-XJ-R7g"/>
                     <navigationItem key="navigationItem" id="0nR-6o-o2k"/>
+                    <connections>
+                        <outlet property="PactTableView" destination="K4d-tf-jZY" id="YdH-cP-uVN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1l-2m-5Oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -871,14 +874,6 @@ description for your Pact</string>
                                 <rect key="frame" x="-5" y="424" width="388" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jg0-vN-ybA">
-                                <rect key="frame" x="-27" y="585" width="429" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="nextStepButton"/>
-                                <connections>
-                                    <action selector="addPact:" destination="M59-Nk-gG7" eventType="touchUpInside" id="gl3-er-HqU"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Evw-gI-ybV">
                                 <rect key="frame" x="28" y="454" width="323" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -893,6 +888,14 @@ description for your Pact</string>
                                 <color key="textColor" red="0.56470588239999997" green="0.64313725489999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jg0-vN-ybA">
+                                <rect key="frame" x="-27" y="585" width="429" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="nextStepButton"/>
+                                <connections>
+                                    <action selector="addPact:" destination="M59-Nk-gG7" eventType="touchUpInside" id="gl3-er-HqU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -1274,10 +1277,10 @@ description for your Pact</string>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="n52-HT-nVX"/>
+        <segue reference="CGP-1w-jmr"/>
         <segue reference="27R-ob-Luf"/>
-        <segue reference="Zj2-LU-xSp"/>
-        <segue reference="yTk-ci-Nm9"/>
+        <segue reference="NkS-dl-LSU"/>
+        <segue reference="Rgp-Hz-MpM"/>
         <segue reference="K8r-iD-hKQ"/>
         <segue reference="hiL-JV-ehH"/>
     </inferredMetricsTieBreakers>
