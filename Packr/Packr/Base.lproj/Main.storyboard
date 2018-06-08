@@ -156,6 +156,9 @@
                                 <rect key="frame" x="28" y="524" width="319" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="LoginFacebook"/>
+                                <connections>
+                                    <action selector="FBLoginButton:" destination="4Ip-8a-aQR" eventType="touchUpInside" id="aV5-u5-6Qb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPP-lZ-eyU">
                                 <rect key="frame" x="77" y="223" width="257" height="30"/>
@@ -179,8 +182,8 @@
                                 <rect key="frame" x="48" y="228" width="21" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-ov-t0d">
-                                <rect key="frame" x="36" y="123" width="302" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-ov-t0d">
+                                <rect key="frame" x="36" y="112" width="302" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="0.72045963196286467" green="0.0" blue="0.32217661463003866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,6 +221,7 @@
                         <outlet property="loginButton" destination="3IS-th-gSl" id="s4a-t5-g92"/>
                         <outlet property="passInput" destination="XYD-s2-xYT" id="FPs-9H-Atg"/>
                         <segue destination="utS-2j-i5h" kind="show" identifier="Login" id="IZO-DQ-4kM"/>
+                        <segue destination="utS-2j-i5h" kind="show" identifier="segueFacebookLogin" id="fId-tN-h9N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bss-Bx-hUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,7 +385,7 @@
         <scene sceneID="2pa-c8-1gT">
             <objects>
                 <navigationController id="YaT-mX-AuZ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CkM-y6-lyL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CkM-y6-lyL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -466,7 +470,7 @@
                                     <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signOutButton:" destination="utS-2j-i5h" eventType="touchUpInside" id="aNN-gL-nfb"/>
+                                    <action selector="signOutButton:" destination="I7Q-c1-ze2" eventType="touchUpInside" id="xcb-Q2-2Yx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -475,6 +479,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" selectedImage="Profile" id="ccX-VC-jpK"/>
                     <connections>
                         <outlet property="userEmail" destination="7jT-xK-cpt" id="YTg-0I-Wt7"/>
+                        <segue destination="4Ip-8a-aQR" kind="show" identifier="segueIfLogoutSuceeded" id="Cjq-lD-NTG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuT-X8-3hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1277,11 +1282,11 @@ description for your Pact</string>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CGP-1w-jmr"/>
-        <segue reference="27R-ob-Luf"/>
-        <segue reference="NkS-dl-LSU"/>
-        <segue reference="Rgp-Hz-MpM"/>
-        <segue reference="K8r-iD-hKQ"/>
+        <segue reference="n52-HT-nVX"/>
+        <segue reference="t5e-5B-qqd"/>
+        <segue reference="fId-tN-h9N"/>
+        <segue reference="yTk-ci-Nm9"/>
+        <segue reference="Cjq-lD-NTG"/>
         <segue reference="hiL-JV-ehH"/>
     </inferredMetricsTieBreakers>
 </document>

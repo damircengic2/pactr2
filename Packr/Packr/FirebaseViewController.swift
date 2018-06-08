@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FacebookCore
+import FacebookLogin
 
 class FirebaseViewController: UIViewController{
     
@@ -71,6 +73,39 @@ class FirebaseViewController: UIViewController{
             self.labelError.text = "Please enter your creditentials!"
         }
     }
+    
+    @IBAction func FBLoginButton(_ sender: Any) {
+        
+        let loginManager = LoginManager()
+        loginManager.logIn([.publicProfile, .email], viewController: self){ (result) in
+            switch result {
+                
+            case .success(grantedPermissions: _, declinedPermissions: _, token: _): print("Success")
+                self.signIntoFirebase()
+            case .failed(let err): print(err)
+            case .cancelled: print("Cancelled")
+            }
+        }
+
+                           
+    }
+    
+    fileprivate func signIntoFirebase(){
+        guard let authToken = AccessToken.current?.authenticationToken else {return}
+        let creditentials = FacebookAuthProvider.credential(withAccessToken: authToken)
+        Auth.auth().signIn(with: creditentials) { (user, err) in
+            
+            if let err = err{
+                print (err)
+                return
+            }
+            self.performSegue(withIdentifier: "segueFacebookLogin", sender: self)
+            print ("Sucessfully authenticated with Firebase")
+            print (Auth.auth().currentUser?.uid as Any)
+            //self.dismiss(animated: true, completion: nil)
+    }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
