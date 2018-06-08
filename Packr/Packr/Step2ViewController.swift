@@ -13,9 +13,15 @@ class Step2ViewController: UIViewController  {
 var newPactName = ""
 var newPactDescr = ""
     
+    @IBOutlet weak var registerLabelError: UILabel!
     @IBOutlet weak var pactPeopleInput: UITextField!
     @IBAction func addPact(_ sender: Any) {
-        self.performSegue(withIdentifier:"Step3", sender: prepare)
+        if pactPeopleInput.text! != "" {
+             self.performSegue(withIdentifier:"Step3", sender: prepare)
+        }else{
+            self.registerLabelError.text! = "Please enter people to sign your pact!"
+        }
+       
     }
     
     override func viewDidLoad() {
@@ -28,12 +34,13 @@ var newPactDescr = ""
         // Dispose of any resources that can be recreated.
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   
+
         let controller = segue.destination as? Step3ViewController
         controller?.newPactName = newPactName
         controller?.newPactDescr = newPactDescr
         controller?.newPactPeople = pactPeopleInput.text!
-        
+
     }
 }

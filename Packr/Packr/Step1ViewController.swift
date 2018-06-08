@@ -16,10 +16,15 @@ class Step1ViewController: UIViewController  {
     @IBOutlet weak var pactNameInput: UITextField!
     @IBOutlet weak var pactDescrText: UITextView!
     
+    @IBOutlet weak var registerLabelError: UILabel!
     
     
     @IBAction func addPact(_ sender: Any) {
-        self.performSegue(withIdentifier:"Step2", sender: prepare)
+         if pactNameInput.text! != "" {
+            self.performSegue(withIdentifier:"Step2", sender: prepare)
+         }else{
+            self.registerLabelError.text! = "Please enter Pact title!"
+        }
     }
 
     

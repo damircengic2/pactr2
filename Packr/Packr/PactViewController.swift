@@ -27,6 +27,9 @@ class PactViewController: UIViewController {
             }
             if let label = pactStateLabel {
                 label.text = detail.pactState
+                if detail.pactState == "new"{
+                    label.backgroundColor = .blue
+                }
             }
             if let label = pactPeopleLabel {
                 label.text = detail.pactPeople

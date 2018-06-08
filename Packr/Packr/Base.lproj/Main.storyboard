@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M59-Nk-gG7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -220,13 +220,13 @@
                         <outlet property="labelError" destination="NOw-ov-t0d" id="tEi-Gp-Y2a"/>
                         <outlet property="loginButton" destination="3IS-th-gSl" id="s4a-t5-g92"/>
                         <outlet property="passInput" destination="XYD-s2-xYT" id="FPs-9H-Atg"/>
-                        <segue destination="utS-2j-i5h" kind="show" identifier="Login" id="IZO-DQ-4kM"/>
-                        <segue destination="utS-2j-i5h" kind="show" identifier="segueFacebookLogin" id="fId-tN-h9N"/>
+                        <segue destination="YaT-mX-AuZ" kind="show" identifier="segueFacebookLogin" id="UqF-Ii-DQk"/>
+                        <segue destination="YaT-mX-AuZ" kind="show" identifier="Login" id="KXc-51-huN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bss-Bx-hUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1266.4000000000001" y="936.88155922038993"/>
+            <point key="canvasLocation" x="-1246" y="937"/>
         </scene>
         <!--After Register View Controller-->
         <scene sceneID="vbq-zE-6LF">
@@ -326,7 +326,7 @@
                         <outlet property="loginButton" destination="tm5-Ds-wS3" id="jEE-Au-sg4"/>
                         <outlet property="newEmailSent" destination="qnW-Mb-PXT" id="zd9-mN-4KP"/>
                         <outlet property="passInput" destination="BHw-F4-v8T" id="el3-AS-5wd"/>
-                        <segue destination="utS-2j-i5h" kind="show" identifier="segueIfLoginAfterRegisterSuceeded" id="Iyn-d2-fiz"/>
+                        <segue destination="YaT-mX-AuZ" kind="show" identifier="segueIfLoginAfterRegisterSuceeded" id="6Bg-Ld-pXa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylf-cK-AWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -395,7 +395,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeE-gg-wSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4055" y="223"/>
+            <point key="canvasLocation" x="3052" y="1743"/>
         </scene>
         <!--Profile-->
         <scene sceneID="q88-VR-FIq">
@@ -555,6 +555,7 @@
                     <navigationItem key="navigationItem" id="0nR-6o-o2k"/>
                     <connections>
                         <outlet property="PactTableView" destination="K4d-tf-jZY" id="YdH-cP-uVN"/>
+                        <segue destination="M59-Nk-gG7" kind="show" identifier="AddPact" id="EO7-S1-Sk8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1l-2m-5Oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -593,7 +594,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrz-y3-qZW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="8YQ-y0-UqM">
                                         <rect key="frame" x="8" y="435" width="353" height="97"/>
@@ -880,9 +881,6 @@ description for your Pact</string>
                                 <rect key="frame" x="10" y="10" width="28" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="BackButton"/>
-                                <connections>
-                                    <segue destination="utS-2j-i5h" kind="show" identifier="backToProfile" id="NkS-dl-LSU"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type here..." textAlignment="natural" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="76e-gx-iim">
                                 <rect key="frame" x="28" y="352" width="323" height="30"/>
@@ -924,18 +922,26 @@ description for your Pact</string>
                                     <action selector="addPact:" destination="M59-Nk-gG7" eventType="touchUpInside" id="gl3-er-HqU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4M-UP-KBR">
+                                <rect key="frame" x="19" y="568" width="336" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <color key="textColor" red="0.72045963199999996" green="0.0" blue="0.32217661460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="pactDescrText" destination="Evw-gI-ybV" id="fFt-YZ-oib"/>
                         <outlet property="pactNameInput" destination="76e-gx-iim" id="yXu-8Y-sdZ"/>
+                        <outlet property="registerLabelError" destination="y4M-UP-KBR" id="KnG-r4-Pep"/>
                         <segue destination="MG4-H9-WGp" kind="show" identifier="Step2" id="n52-HT-nVX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itj-oe-WK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="922"/>
+            <point key="canvasLocation" x="908" y="921.58920539730138"/>
         </scene>
         <!--Step2 View Controller-->
         <scene sceneID="9J5-u2-yPF">
@@ -1014,9 +1020,15 @@ description for your Pact</string>
                                         <state key="normal" title="Button" image="nextStepButton"/>
                                         <connections>
                                             <action selector="addPact:" destination="MG4-H9-WGp" eventType="touchUpInside" id="O5W-z9-2HJ"/>
-                                            <segue destination="mRP-CE-BZj" kind="show" identifier="Step3" id="M5V-Hr-6sz"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-ks-sen">
+                                        <rect key="frame" x="20" y="544" width="336" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" red="0.72045963199999996" green="0.0" blue="0.32217661460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
@@ -1025,6 +1037,8 @@ description for your Pact</string>
                     </view>
                     <connections>
                         <outlet property="pactPeopleInput" destination="TxU-p6-Gh4" id="6Sy-JU-6Ty"/>
+                        <outlet property="registerLabelError" destination="Tok-ks-sen" id="dCD-Hl-zH0"/>
+                        <segue destination="mRP-CE-BZj" kind="show" identifier="Step3" id="Fp8-ME-DE4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7U-Kb-SI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1305,11 +1319,11 @@ description for your Pact</string>
         <image name="wavyBg" width="500" height="434"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cjq-lD-NTG"/>
-        <segue reference="yTk-ci-Nm9"/>
-        <segue reference="fId-tN-h9N"/>
-        <segue reference="t5e-5B-qqd"/>
         <segue reference="n52-HT-nVX"/>
+        <segue reference="27R-ob-Luf"/>
+        <segue reference="yTk-ci-Nm9"/>
+        <segue reference="K8r-iD-hKQ"/>
         <segue reference="fcS-hh-EMp"/>
+        <segue reference="6Bg-Ld-pXa"/>
     </inferredMetricsTieBreakers>
 </document>
