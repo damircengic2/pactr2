@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController{
         
         if Auth.auth().currentUser != nil {
         try! Auth.auth().signOut()
+            print("Signed out")
         self.performSegue(withIdentifier: "segueIfLogoutSuceeded", sender: self)
         userEmail.text! = ""
             

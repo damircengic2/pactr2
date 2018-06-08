@@ -10,8 +10,8 @@ target 'Packr' do
   	pod 'Firebase/Core'
   	pod 'Firebase/Database’
   	pod 'Firebase/Auth’
-    pod 'FBSDKLoginKit'
-    pod 'FBSDKCoreKit'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
 
   target 'PackrTests' do
     inherit! :search_paths
