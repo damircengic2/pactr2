@@ -13,7 +13,7 @@ class Step3ViewController: UIViewController  {
     var newPactName = ""
     var newPactDescr = ""
     var newPactPeople = ""
-    var newPactState = "new"
+    var newPactState = "signed"
     var newPactTime = Date().toString(withFormat: "dd-MMM-yyyy")
     var newPactSender = ""
     
