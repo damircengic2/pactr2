@@ -6,6 +6,8 @@
 //  Copyright © 2018 mini1. All rights reserved.
 //
 
+import Firebase
+import FirebaseAuth
 import UIKit
 
 class Step2ViewController: UIViewController  {
@@ -41,6 +43,7 @@ var newPactDescr = ""
         controller?.newPactName = newPactName
         controller?.newPactDescr = newPactDescr
         controller?.newPactPeople = pactPeopleInput.text!
+        controller?.newPactSender = (Auth.auth().currentUser?.email)!
 
     }
 }

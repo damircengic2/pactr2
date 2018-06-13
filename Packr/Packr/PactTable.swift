@@ -38,6 +38,7 @@ class PactTable: UITableView {
         cell.pactPeople = object.pactPeople
         cell.pactState = object.pactState
         cell.pactTime = object.pactTime
+        cell.pactSender = object.pactSender
         
         return cell
     }

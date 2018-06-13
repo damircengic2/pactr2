@@ -15,6 +15,7 @@ class PactUITableCell: UITableViewCell {
     var pactState:String = ""
     var pactPeople:String = ""
     var pactTime:String = ""
+    var pactSender:String = ""
 
     @IBOutlet weak var pactNameLabel: UILabel!
     @IBOutlet weak var pactStateLabel: UILabel!

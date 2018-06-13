@@ -15,6 +15,7 @@ class Step3ViewController: UIViewController  {
     var newPactPeople = ""
     var newPactState = "new"
     var newPactTime = Date().toString(withFormat: "dd-MMM-yyyy")
+    var newPactSender = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class Step3ViewController: UIViewController  {
     
         ref = Database.database().reference()
         
-        let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState, pactTime: newPactTime)
+        let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState, pactTime: newPactTime, pactSender: newPactSender)
         
 
         ref?.child("Pact").childByAutoId().setValue(newPact.asDictionary())

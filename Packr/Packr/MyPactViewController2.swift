@@ -19,6 +19,8 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
     var refHandle: UInt!
+    var sender: String = ""
+    var reciever: String = ""
     
 
     @IBOutlet weak var pactTableView: UITableView!
@@ -32,7 +34,7 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
         
         ref = Database.database().reference()
         //observing the data changes
-        var childRef = ref?.child("Pact")
+        let childRef = ref?.child("Pact")
         
         refHandle = childRef?.observe(DataEventType.value, with: { (snapshot) in
             let dataDict = snapshot.value as! [String: AnyObject]
@@ -41,10 +43,15 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
             for (_, item) in dataDict{
                //print(item["pactName"])
 
-                let newPact = Pact(pactName: item["pactName"] as! String, pactDescr: item["pactDescr"] as! String, pactPeople: item["pactPeople"] as! String, pactState: item["pactState"] as! String, pactTime: item["pactTime"] as! String)
-                self.objects.append(newPact)
+                let newPact = Pact(pactName: item["pactName"] as! String, pactDescr: item["pactDescr"] as! String, pactPeople: item["pactPeople"] as! String, pactState: item["pactState"] as! String, pactTime: item["pactTime"] as! String, pactSender: item["pactSender"] as! String)
+                self.sender = newPact.pactSender
+                self.reciever = newPact.pactPeople
+                if(self.sender == Auth.auth().currentUser?.email || self.reciever == Auth.auth().currentUser?.email){
+                    self.objects.append(newPact)
+                }
             }
             self.pactTableView.reloadData()
+            
         })
         
         
