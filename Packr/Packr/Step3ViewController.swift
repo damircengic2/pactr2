@@ -14,7 +14,7 @@ class Step3ViewController: UIViewController  {
     var newPactDescr = ""
     var newPactPeople = ""
     var newPactState = "new"
-    var newPactTime = Date()
+    var newPactTime = Date().toString(withFormat: "dd-MMM-yyyy")
     
     override func viewDidLoad() {
         super.viewDidLoad()

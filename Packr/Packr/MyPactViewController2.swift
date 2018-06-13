@@ -9,25 +9,45 @@
 
 import UIKit
 import FirebaseDatabase
+import Firebase
+import FirebaseAuth
 
-class MyPactsViewController2: UIViewController {
+class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var detailViewController: PactViewController? = nil
     var objects:[Pact] = []
     var handle: DatabaseHandle?
     var ref: DatabaseReference?
+    var refHandle: UInt!
     
 
-    @IBOutlet weak var pactTableView: PactTable!
+    @IBOutlet weak var pactTableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         navigationItem.leftBarButtonItem = editButtonItem
         
         ref = Database.database().reference()
         //observing the data changes
+        var childRef = ref?.child("Pact")
+        
+        refHandle = childRef?.observe(DataEventType.value, with: { (snapshot) in
+            let dataDict = snapshot.value as! [String: AnyObject]
+            
+            print(dataDict)
+            for (_, item) in dataDict{
+               //print(item["pactName"])
+
+                let newPact = Pact(pactName: item["pactName"] as! String, pactDescr: item["pactDescr"] as! String, pactPeople: item["pactPeople"] as! String, pactState: item["pactState"] as! String, pactTime: item["pactTime"] as! String)
+                self.objects.append(newPact)
+            }
+            self.pactTableView.reloadData()
+        })
+        
+        
         
     }
     
@@ -71,7 +91,7 @@ class MyPactsViewController2: UIViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PactUITableCell
         
-        let object = Storage.shared.objects[indexPath.row]
+        let object = objects[indexPath.row]
         cell.pactNameLabel.text! = object.pactName
         cell.pactStateLabel.text! = object.pactState
         

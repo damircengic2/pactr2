@@ -14,7 +14,7 @@ class PactUITableCell: UITableViewCell {
     var pactDescr:String = ""
     var pactState:String = ""
     var pactPeople:String = ""
-    var pactTime:Date = Date()
+    var pactTime:String = ""
 
     @IBOutlet weak var pactNameLabel: UILabel!
     @IBOutlet weak var pactStateLabel: UILabel!
