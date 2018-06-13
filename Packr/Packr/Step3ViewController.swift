@@ -29,8 +29,9 @@ class Step3ViewController: UIViewController  {
     
 
     
-    @IBAction func addPact(_ sender: Any) {
-        
+
+    @IBAction func SignAndSend(_ sender: Any) {
+    
         ref = Database.database().reference()
         
         let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState, pactTime: newPactTime)
