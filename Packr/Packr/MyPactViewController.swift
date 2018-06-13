@@ -80,7 +80,7 @@ class MyPactsViewController: UITableViewController {
         
         let object = Storage.shared.objects[indexPath.row]
         cell.pactNameLabel.text! = object.pactName
-        cell.pactStateLabel.text! = object.pactState
+
         
         cell.pactName = object.pactName
         cell.pactDescr = object.pactDescr

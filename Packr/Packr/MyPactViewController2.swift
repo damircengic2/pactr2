@@ -93,7 +93,7 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
         
         let object = objects[indexPath.row]
         cell.pactNameLabel.text! = object.pactName
-        cell.pactStateLabel.text! = object.pactState
+        cell.backgroundColour(state: object.pactState)
         
         cell.pactName = object.pactName
         cell.pactDescr = object.pactDescr
