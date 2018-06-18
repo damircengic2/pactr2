@@ -33,7 +33,7 @@ class FirebaseViewController: UIViewController{
     
     @IBOutlet var loginButton: UIButton!
     
-    
+    var ref:DatabaseReference?
     @IBAction func registerButton(_ sender: UIButton) {
         if registerEmailInput.text! != "" && registerPassInput.text! != "" && passConfirmInput.text! != ""
         {
@@ -56,8 +56,11 @@ class FirebaseViewController: UIViewController{
                 }
             })
             }
-            Storage.shared.users.append((Auth.auth().currentUser!.email!))
-            print(Storage.shared.users)
+            
+            ref = Database.database().reference()
+            ref?.child("User").childByAutoId().setValue(Auth.auth().currentUser!.email!)
+            //Storage.shared.users.append((Auth.auth().currentUser!.email!))
+          //  print(Storage.shared.users)
         }else {
             self.registerLabelError.text! = "Please enter creditentials!"
         }

@@ -37,7 +37,7 @@ class Step3ViewController: UIViewController  {
         
         let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState, pactTime: newPactTime, pactSender: newPactSender)
         
-
+    
         ref?.child("Pact").childByAutoId().setValue(newPact.asDictionary())
         
         //Storage.shared.objects.append(newPact)
