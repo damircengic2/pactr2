@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController{
     override func viewDidLoad() {
        
         if let text = userEmail{
-         //   text.text! = (Auth.auth().currentUser?.email)!
+            text.text! = (Auth.auth().currentUser?.email)!
         }
  
     super.viewDidLoad()

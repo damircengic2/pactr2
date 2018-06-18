@@ -18,12 +18,14 @@ var newPactDescr = ""
     @IBOutlet weak var registerLabelError: UILabel!
     @IBOutlet weak var pactPeopleInput: UITextField!
     @IBAction func addPact(_ sender: Any) {
-        if pactPeopleInput.text! != "" {
-             self.performSegue(withIdentifier:"Step3", sender: prepare)
-        }else{
+        
+        if pactPeopleInput.text! == ""{
             self.registerLabelError.text! = "Please enter people to sign your pact!"
+        }else if Storage.shared.users.contains(pactPeopleInput.text!) == false{
+            self.registerLabelError.text! = "There is no such Pactr user!"
+        }else{
+            self.performSegue(withIdentifier:"Step3", sender: prepare)
         }
-       
     }
     
     override func viewDidLoad() {

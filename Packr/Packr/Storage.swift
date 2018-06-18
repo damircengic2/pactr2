@@ -12,8 +12,13 @@ class Storage {
     static let shared: Storage = Storage()
     
     var objects : [Pact]
+    var users : [String]
     
     private init() {
         objects = [Pact]()
+        users = [String]()
     }
+    
+    
+    
 }

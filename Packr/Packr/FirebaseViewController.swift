@@ -20,6 +20,7 @@ class FirebaseViewController: UIViewController{
     @IBOutlet var passConfirmInput: UITextField!
     
     
+    
     @IBOutlet var registerButton: UIButton!
     
     
@@ -42,18 +43,21 @@ class FirebaseViewController: UIViewController{
             Auth.auth().createUser(withEmail: registerEmailInput.text!, password: registerPassInput.text!, completion: { (user, error ) in if user != nil{
                 let currUser = Auth.auth().currentUser
                     currUser?.sendEmailVerification(completion: nil)
+                
                     self.performSegue(withIdentifier: "segueIfRegisterSuceeded", sender: self)
-                            }else{
+                }else{
                 if let myError = error?.localizedDescription{
                     self.registerLabelError.text! = myError
                 }
                 else{
                     print("ERROR")
                 }
+                
                 }
             })
             }
-            
+            Storage.shared.users.append((Auth.auth().currentUser!.email!))
+            print(Storage.shared.users)
         }else {
             self.registerLabelError.text! = "Please enter creditentials!"
         }
@@ -114,6 +118,8 @@ class FirebaseViewController: UIViewController{
             print ("Sucessfully authenticated with Firebase")
             print (Auth.auth().currentUser?.uid as Any)
     }
+        Storage.shared.users.append((Auth.auth().currentUser!.email!))
+        print(Storage.shared.users)
     }
     
     
