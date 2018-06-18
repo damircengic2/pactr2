@@ -23,6 +23,8 @@ var newPactDescr = ""
             self.registerLabelError.text! = "Please enter people to sign your pact!"
         }else if Storage.shared.users.contains(pactPeopleInput.text!) == false{
             self.registerLabelError.text! = "There is no such Pactr user!"
+        }else if pactPeopleInput.text! == Auth.auth().currentUser?.email{
+            self.registerLabelError.text! = "You cannot send a Pact to yourself!"
         }else{
             self.performSegue(withIdentifier:"Step3", sender: prepare)
         }
