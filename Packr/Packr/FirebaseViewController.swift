@@ -58,7 +58,7 @@ class FirebaseViewController: UIViewController{
             }
             
             ref = Database.database().reference()
-            ref?.child("User").childByAutoId().setValue(Auth.auth().currentUser!.email!)
+            ref?.child("User").childByAutoId().setValue(registerEmailInput.text!)
             //Storage.shared.users.append((Auth.auth().currentUser!.email!))
           //  print(Storage.shared.users)
         }else {

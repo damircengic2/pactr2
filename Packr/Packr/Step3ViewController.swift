@@ -43,4 +43,10 @@ class Step3ViewController: UIViewController  {
         //Storage.shared.objects.append(newPact)
         performSegue(withIdentifier: "Confirmation", sender: self)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 }
