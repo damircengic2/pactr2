@@ -121,7 +121,6 @@ class FirebaseViewController: UIViewController{
             print ("Sucessfully authenticated with Firebase")
             print (Auth.auth().currentUser?.uid as Any)
     }
-        Storage.shared.users.append((Auth.auth().currentUser!.email!))
         print(Storage.shared.users)
     }
     
