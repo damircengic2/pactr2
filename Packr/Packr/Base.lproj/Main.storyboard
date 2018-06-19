@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1295,7 +1295,7 @@ description for your Pact</string>
                                         <rect key="frame" x="215" y="85" width="111" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A friendly bet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-pF-e8s">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsigned pact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-pF-e8s">
                                         <rect key="frame" x="53" y="95" width="127" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
@@ -1374,12 +1374,16 @@ description for your Pact</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pactDescrTextView" destination="hqC-La-6gG" id="OVH-iA-fhx"/>
-                        <outlet property="pactNameLabel" destination="j90-it-Vaw" id="lJ2-4j-5GQ"/>
+                        <outlet property="pactDescrTextView" destination="5LX-wl-qKR" id="JgA-lm-EOa"/>
+                        <outlet property="pactDescrTextView2" destination="hqC-La-6gG" id="Rif-Ra-xpd"/>
+                        <outlet property="pactNameLabel" destination="2gT-R4-gkc" id="Ttj-XE-Bwt"/>
+                        <outlet property="pactNameLabel2" destination="j90-it-Vaw" id="2wN-NP-HuM"/>
                         <outlet property="pactPeopleLabel" destination="aCF-CJ-J5X" id="ldP-io-lus"/>
-                        <outlet property="pactSenderLabel" destination="q4L-JY-qjb" id="2la-bx-w8C"/>
+                        <outlet property="pactSenderLabel" destination="A3F-1n-TiH" id="tcT-Qm-05c"/>
+                        <outlet property="pactSenderLabel2" destination="q4L-JY-qjb" id="qwa-1m-F2k"/>
                         <outlet property="pactStateLabel" destination="7eE-xt-uaC" id="ArF-Cc-sJD"/>
-                        <outlet property="pactTimeLabel" destination="8Sq-aM-uAd" id="ywL-iF-AOW"/>
+                        <outlet property="pactTimeLabel" destination="4KT-Nj-dKJ" id="dBe-Pe-3Fl"/>
+                        <outlet property="pactTimeLabel2" destination="8Sq-aM-uAd" id="oFe-ha-io8"/>
                         <outlet property="pendingPactView" destination="hxW-Hw-uWF" id="pzP-Gc-k36"/>
                         <outlet property="signedPactView" destination="kZ0-Be-dwe" id="PFc-5Y-Pdc"/>
                     </connections>

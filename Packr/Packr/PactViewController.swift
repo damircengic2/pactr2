@@ -12,13 +12,17 @@ import FirebaseDatabase
 
 class PactViewController: UIViewController {
 
+    @IBOutlet weak var pactNameLabel2: UILabel!
     @IBOutlet weak var pactNameLabel: UILabel!
     @IBOutlet weak var pactDescrTextView: UITextView!
+    @IBOutlet weak var pactDescrTextView2: UITextView!
     @IBOutlet weak var pactStateLabel: UILabel!
     @IBOutlet weak var pactPeopleLabel: UILabel!
     @IBOutlet weak var pactTimeLabel: UILabel!
+    @IBOutlet weak var pactTimeLabel2: UILabel!
     @IBOutlet weak var pactSenderLabel: UILabel!
-
+    @IBOutlet weak var pactSenderLabel2: UILabel!
+    
 	@IBOutlet weak var pendingPactView: UIView!
 	@IBOutlet weak var signedPactView: UIView!
 
@@ -27,7 +31,12 @@ class PactViewController: UIViewController {
         if let detail = detailItem {
             if let label = pactNameLabel {
                 label.text! = detail.pactName            }
+            if let label = pactNameLabel2 {
+                label.text! = detail.pactName            }
             if let label = pactDescrTextView {
+                label.text! = detail.pactDescr
+            }
+            if let label = pactDescrTextView2 {
                 label.text! = detail.pactDescr
             }
             if let label = pactStateLabel {
@@ -50,7 +59,13 @@ class PactViewController: UIViewController {
             if let label = pactTimeLabel {
                 label.text = String(describing: detail.pactTime)
             }
+            if let label = pactTimeLabel2 {
+                label.text = String(describing: detail.pactTime)
+            }
             if let label = pactSenderLabel {
+                label.text = detail.pactSender
+            }
+            if let label = pactSenderLabel2 {
                 label.text = detail.pactSender
             }
         }
