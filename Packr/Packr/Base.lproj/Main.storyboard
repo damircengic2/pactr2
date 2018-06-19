@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1206,7 +1206,7 @@ description for your Pact</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZ0-Be-dwe">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZ0-Be-dwe" userLabel="signedView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -1284,8 +1284,94 @@ description for your Pact</string>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-Hw-uWF" userLabel="pendingView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PactAcceptBox" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-EQ-cU8">
+                                        <rect key="frame" x="9" y="55" width="357" height="556"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabelButtonNew" translatesAutoresizingMaskIntoConstraints="NO" id="RBy-Qr-uGD">
+                                        <rect key="frame" x="215" y="85" width="111" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A friendly bet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-pF-e8s">
+                                        <rect key="frame" x="53" y="95" width="127" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$15 says Bayern wins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gT-R4-gkc">
+                                        <rect key="frame" x="53" y="180" width="273" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" red="0.64772294829999999" green="0.17926180010000001" blue="0.65447034059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12.5.2018 | 10:55" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KT-Nj-dKJ">
+                                        <rect key="frame" x="53" y="123" width="93" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" red="0.62406897670000006" green="0.62406897670000006" blue="0.62406897670000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-wl-qKR">
+                                        <rect key="frame" x="47" y="210" width="284" height="145"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Hey guys, bluh bluh bluh bluh bluh bluh bluh bluh bluh  bluh bluh bluh bluh bluh bluh bluh bluh bluh  bluh bluh bluh bluh bluh bluh bluh bluh bluh  bluh bluh bluh bluh bluh bluh bluh bluh bluh  bluh bluh bluh bluh bluh bluh bluh bluh bluh.</string>
+                                        <color key="textColor" white="0.5439453125" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Created by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzd-oX-nmv">
+                                        <rect key="frame" x="66" y="386" width="80" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="damir.cengic@windowslive.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-1n-TiH">
+                                        <rect key="frame" x="66" y="416" width="246" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SignButton" translatesAutoresizingMaskIntoConstraints="NO" id="KWQ-cs-W0h">
+                                        <rect key="frame" x="103" y="498" width="131" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ButtonX" translatesAutoresizingMaskIntoConstraints="NO" id="22u-1X-att">
+                                        <rect key="frame" x="242" y="509" width="49" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnt-zV-NUL">
+                                        <rect key="frame" x="109" y="498" width="125" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="authenticationWithTouchID" destination="S6K-0M-P4j" eventType="touchUpInside" id="KVI-oj-kqC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-YA-kcc">
+                                        <rect key="frame" x="242" y="498" width="49" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="cancelPact" destination="S6K-0M-P4j" eventType="touchUpInside" id="Xs9-AQ-jPI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hxW-Hw-uWF" secondAttribute="trailing" id="LY9-qx-xVz"/>
+                            <constraint firstItem="hxW-Hw-uWF" firstAttribute="top" secondItem="1GZ-5K-c9s" secondAttribute="top" id="U4x-JJ-vcQ"/>
+                            <constraint firstItem="sDv-YJ-WKj" firstAttribute="top" secondItem="hxW-Hw-uWF" secondAttribute="bottom" id="dYq-j8-ohK"/>
+                            <constraint firstItem="hxW-Hw-uWF" firstAttribute="leading" secondItem="1GZ-5K-c9s" secondAttribute="leading" id="wF7-KY-a9W"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="pactDescrTextView" destination="hqC-La-6gG" id="OVH-iA-fhx"/>
@@ -1294,6 +1380,8 @@ description for your Pact</string>
                         <outlet property="pactSenderLabel" destination="q4L-JY-qjb" id="2la-bx-w8C"/>
                         <outlet property="pactStateLabel" destination="7eE-xt-uaC" id="ArF-Cc-sJD"/>
                         <outlet property="pactTimeLabel" destination="8Sq-aM-uAd" id="ywL-iF-AOW"/>
+                        <outlet property="pendingPactView" destination="hxW-Hw-uWF" id="pzP-Gc-k36"/>
+                        <outlet property="signedPactView" destination="kZ0-Be-dwe" id="PFc-5Y-Pdc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0aX-S3-oQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1336,7 +1424,7 @@ description for your Pact</string>
     <inferredMetricsTieBreakers>
         <segue reference="CGP-1w-jmr"/>
         <segue reference="iKm-FX-eby"/>
-        <segue reference="aXB-Ky-2Z6"/>
+        <segue reference="Mp0-4C-ezz"/>
         <segue reference="Cjq-lD-NTG"/>
         <segue reference="hiL-JV-ehH"/>
     </inferredMetricsTieBreakers>

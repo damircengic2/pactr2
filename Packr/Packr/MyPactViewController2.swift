@@ -55,12 +55,11 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
             
         })
         
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+		self.pactTableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

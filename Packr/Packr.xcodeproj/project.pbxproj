@@ -27,6 +27,7 @@
 		8C391A422090A6A000E06186 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C391A402090A6A000E06186 /* LaunchScreen.storyboard */; };
 		8C391A4D2090A6A000E06186 /* PackrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C391A4C2090A6A000E06186 /* PackrTests.swift */; };
 		8C391A582090A6A000E06186 /* PackrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C391A572090A6A000E06186 /* PackrUITests.swift */; };
+		9FAC3DEB20D9845A00E9D73D /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAC3DEA20D9845A00E9D73D /* LocalAuthentication.framework */; };
 		EC8E1A2F20ADC24E009DEB6E /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8E1A2E20ADC24E009DEB6E /* FirebaseViewController.swift */; };
 		EC8E1A3120ADCB3A009DEB6E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8E1A3020ADCB3A009DEB6E /* ProfileViewController.swift */; };
 		ECBCFC9220ADAE2D00109A17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECBCFC9120ADAE2D00109A17 /* GoogleService-Info.plist */; };
@@ -82,6 +83,7 @@
 		8C391A532090A6A000E06186 /* PackrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PackrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C391A572090A6A000E06186 /* PackrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackrUITests.swift; sourceTree = "<group>"; };
 		8C391A592090A6A000E06186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FAC3DEA20D9845A00E9D73D /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		A6A30D1CDC220E88E873E943 /* Pods-PackrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PackrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PackrUITests/Pods-PackrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B982A5A86C37DC11F142E3E7 /* Pods-Packr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Packr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Packr/Pods-Packr.release.xcconfig"; sourceTree = "<group>"; };
 		CF5FD924195641EA31D75257 /* Pods-PackrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PackrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PackrTests/Pods-PackrTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FAC3DEB20D9845A00E9D73D /* LocalAuthentication.framework in Frameworks */,
 				F19CD2D49E94F473C94DC1E3 /* Pods_Packr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +209,7 @@
 		FC3BC0FA775927935E777AE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FAC3DEA20D9845A00E9D73D /* LocalAuthentication.framework */,
 				0F57619B6E157F45367286AF /* Pods_Packr.framework */,
 				49E022C0BC68B82648B9EDDD /* Pods_PackrTests.framework */,
 				D7B5D94EB2D13FED4723B4A6 /* Pods_PackrUITests.framework */,
