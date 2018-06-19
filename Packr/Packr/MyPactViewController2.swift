@@ -21,6 +21,7 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
     var refHandle: UInt!
     var sender: String = ""
     var reciever: String = ""
+    var ref1 = Database.database().reference()
     
 
     @IBOutlet weak var pactTableView: UITableView!
@@ -43,7 +44,7 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
             for (_, item) in dataDict{
                //print(item["pactName"])
 
-                let newPact = Pact(pactName: item["pactName"] as! String, pactDescr: item["pactDescr"] as! String, pactPeople: item["pactPeople"] as! String, pactState: item["pactState"] as! String, pactTime: item["pactTime"] as! String, pactSender: item["pactSender"] as! String)
+                let newPact = Pact(pactName: item["pactName"] as! String, pactDescr: item["pactDescr"] as! String, pactPeople: item["pactPeople"] as! String, pactState: item["pactState"] as! String, pactTime: item["pactTime"] as! String, pactSender: item["pactSender"] as! String, pactID: item["pactID"] as! String)
                 self.sender = newPact.pactSender
                 self.reciever = newPact.pactPeople
                 if(self.sender == Auth.auth().currentUser?.email || self.reciever == Auth.auth().currentUser?.email){
@@ -119,11 +120,17 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    
+
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    
         if editingStyle == .delete {
+           
+            let pactID = objects[indexPath.row].pactID
+            self.ref1.child("Pact").child(pactID).setValue(nil)
             objects.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }

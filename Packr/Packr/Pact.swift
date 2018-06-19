@@ -15,17 +15,18 @@ class Pact {
     var pactPeople:String
     var pactTime:String
     var pactSender: String
-    
+    var pactID: String
     //People:String needs to be replaced by Userlist
     
     
-    init(pactName:String, pactDescr:String , pactPeople: String, pactState:String, pactTime:String, pactSender: String){
+    init(pactName:String, pactDescr:String , pactPeople: String, pactState:String, pactTime:String, pactSender: String, pactID: String){
         self.pactName = pactName
         self.pactDescr = pactDescr
         self.pactPeople = pactPeople
         self.pactState = pactState
         self.pactTime = pactTime
         self.pactSender = pactSender
+        self.pactID = pactID
        
 
         
@@ -43,7 +44,9 @@ class Pact {
         "pactPeople": pactPeople,
         "pactState": pactState,
         "pactTime": pactTime,
-        "pactSender": pactSender
+        "pactSender": pactSender,
+        "pactID": pactID
+            
         
         ]
         return pactDictionary

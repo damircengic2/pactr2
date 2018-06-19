@@ -465,7 +465,7 @@
         <scene sceneID="2pa-c8-1gT">
             <objects>
                 <navigationController id="YaT-mX-AuZ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CkM-y6-lyL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CkM-y6-lyL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -532,7 +532,6 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="pactNameLabel" destination="xbq-C9-v9n" id="t94-ez-zMh"/>
@@ -594,7 +593,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Pacts" id="ghj-H1-yln"/>
                     <connections>

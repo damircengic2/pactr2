@@ -35,10 +35,12 @@ class Step3ViewController: UIViewController  {
     
         ref = Database.database().reference()
         
-        let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState, pactTime: newPactTime, pactSender: newPactSender)
+        let childref = ref?.child("Pact").childByAutoId()
+        let newPactID = childref?.key
         
-    
-        ref?.child("Pact").childByAutoId().setValue(newPact.asDictionary())
+        let newPact = Pact(pactName: newPactName, pactDescr: newPactDescr, pactPeople: newPactPeople, pactState: newPactState, pactTime: newPactTime, pactSender: newPactSender, pactID:newPactID!)
+        
+        childref?.setValue(newPact.asDictionary())
         
         //Storage.shared.objects.append(newPact)
         performSegue(withIdentifier: "Confirmation", sender: self)
