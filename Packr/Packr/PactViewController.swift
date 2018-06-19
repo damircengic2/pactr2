@@ -15,6 +15,7 @@ class PactViewController: UIViewController {
     @IBOutlet weak var pactStateLabel: UILabel!
     @IBOutlet weak var pactPeopleLabel: UILabel!
     @IBOutlet weak var pactTimeLabel: UILabel!
+    @IBOutlet weak var pactSenderLabel: UILabel!
 
 
     func configureView() {
@@ -27,8 +28,14 @@ class PactViewController: UIViewController {
             }
             if let label = pactStateLabel {
                 label.text = detail.pactState
-                if detail.pactState == "new"{
-                    label.backgroundColor = .blue
+                if detail.pactState == "signed"{
+                    label.backgroundColor = .green
+                }
+                if detail.pactState == "pending"{
+                    label.backgroundColor = .yellow
+                }
+                if detail.pactState == "rejected"{
+                    label.backgroundColor = .red
                 }
             }
             if let label = pactPeopleLabel {
@@ -36,6 +43,9 @@ class PactViewController: UIViewController {
             }
             if let label = pactTimeLabel {
                 label.text = String(describing: detail.pactTime)
+            }
+            if let label = pactSenderLabel {
+                label.text = detail.pactSender
             }
         }
     }

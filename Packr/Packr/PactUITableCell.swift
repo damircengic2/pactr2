@@ -6,6 +6,9 @@
 //  Copyright © 2018 mini1. All rights reserved.
 //
 
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 import UIKit
 
 class PactUITableCell: UITableViewCell {
@@ -17,8 +20,17 @@ class PactUITableCell: UITableViewCell {
     var pactTime:String = ""
     var pactSender:String = ""
 
+    @IBOutlet weak var pactPartner: UILabel!
     @IBOutlet weak var pactNameLabel: UILabel!
     @IBOutlet weak var pactStateView: UIImageView!
+    
+    func partner(sender: String, reciever: String){
+        if sender == Auth.auth().currentUser?.email{
+            pactPartner.text! = reciever
+        }else if reciever == Auth.auth().currentUser?.email{
+            pactPartner.text! = sender
+        }
+    }
 
     func backgroundColour(state: String) {
         if state == "signed"{

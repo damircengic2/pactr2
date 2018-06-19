@@ -47,7 +47,7 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
                 let newPact = Pact(pactName: item["pactName"] as! String, pactDescr: item["pactDescr"] as! String, pactPeople: item["pactPeople"] as! String, pactState: item["pactState"] as! String, pactTime: item["pactTime"] as! String, pactSender: item["pactSender"] as! String, pactID: item["pactID"] as! String)
                 self.sender = newPact.pactSender
                 self.reciever = newPact.pactPeople
-                if(self.sender == Auth.auth().currentUser?.email || self.reciever == Auth.auth().currentUser?.email){
+                if(self.sender.lowercased() == Auth.auth().currentUser?.email?.lowercased() || self.reciever.lowercased() == Auth.auth().currentUser?.email?.lowercased()){
                     self.objects.append(newPact)
                 }
             }
@@ -102,7 +102,7 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
         let object = objects[indexPath.row]
         cell.pactNameLabel.text! = object.pactName
         cell.backgroundColour(state: object.pactState)
-        
+        cell.partner(sender: object.pactSender, reciever: object.pactPeople)
         cell.pactName = object.pactName
         cell.pactDescr = object.pactDescr
         cell.pactPeople = object.pactPeople
