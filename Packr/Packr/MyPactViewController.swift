@@ -21,6 +21,7 @@ class MyPactsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         navigationItem.leftBarButtonItem = editButtonItem
         
@@ -94,6 +95,7 @@ class MyPactsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 128
     }
+    
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.

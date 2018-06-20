@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseAuth
 
+
+
 class ProfileViewController: UIViewController{
     
     
@@ -30,12 +32,12 @@ class ProfileViewController: UIViewController{
         
     }
     override func viewDidLoad() {
-       
+        super.viewDidLoad()
+        
         if let text = userEmail{
             text.text! = (Auth.auth().currentUser?.email)!
         }
  
-    super.viewDidLoad()
     
 
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,6 +46,12 @@ class ProfileViewController: UIViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
 }

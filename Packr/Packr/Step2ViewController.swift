@@ -22,25 +22,6 @@ var refHandle: UInt!
     
     @IBOutlet weak var registerLabelError: UILabel!
     @IBOutlet weak var pactPeopleInput: UITextField!
-    @IBAction func addPact(_ sender: Any) {
-       peopleValid()
-        if pactPeopleInput.text! == ""{
-            self.registerLabelError.text! = "Please enter people to sign your pact!"
-        }else if pactPeopleValid == false{
-            self.registerLabelError.text! = "There is no such Pactr user!"
-        }else if pactPeopleInput.text! == Auth.auth().currentUser?.email{
-            self.registerLabelError.text! = "You cannot send a Pact to yourself!"
-        }else{
-            self.performSegue(withIdentifier:"Step3", sender: prepare)
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-    }
-    
     func peopleValid(){
         ref = Database.database().reference()
         //observing the data changes
@@ -57,7 +38,27 @@ var refHandle: UInt!
         })
         print(pactPeopleValid)
     }
+@IBAction func addPact(_ sender: Any) {
+       peopleValid()
+        if pactPeopleInput.text! == ""{
+            self.registerLabelError.text! = "Please enter people to sign your pact!"
+        }else if pactPeopleValid == false{
+            self.registerLabelError.text! = "There is no such Pactr user!"
+        }else if pactPeopleInput.text! == Auth.auth().currentUser?.email{
+            self.registerLabelError.text! = "You cannot send a Pact to yourself!"
+        }else{
+            self.performSegue(withIdentifier:"Step3", sender: prepare)
+        }
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

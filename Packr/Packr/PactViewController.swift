@@ -9,14 +9,16 @@
 import UIKit
 import LocalAuthentication
 import FirebaseDatabase
+import FirebaseAuth
+import Firebase
 
 class PactViewController: UIViewController {
-
+    @IBOutlet weak var pactStateView: UIImageView!
+    
     @IBOutlet weak var pactNameLabel2: UILabel!
     @IBOutlet weak var pactNameLabel: UILabel!
     @IBOutlet weak var pactDescrTextView: UITextView!
     @IBOutlet weak var pactDescrTextView2: UITextView!
-    @IBOutlet weak var pactStateLabel: UILabel!
     @IBOutlet weak var pactPeopleLabel: UILabel!
     @IBOutlet weak var pactTimeLabel: UILabel!
     @IBOutlet weak var pactTimeLabel2: UILabel!
@@ -39,18 +41,18 @@ class PactViewController: UIViewController {
             if let label = pactDescrTextView2 {
                 label.text! = detail.pactDescr
             }
-            if let label = pactStateLabel {
-                label.text = detail.pactState
+            if let label = pactStateView{
+                
 				self.pendingPactView.isHidden = true
                 if detail.pactState == "signed"{
-                    label.backgroundColor = .green
+                    pactStateView.image = #imageLiteral(resourceName: "signed")
                 }
-				if detail.pactState == "pending"{
-                    label.backgroundColor = .yellow
-					self.pendingPactView.isHidden = false
+                if detail.pactState == "pending" && detail.pactPeople == Auth.auth().currentUser?.email{
+                    self.pendingPactView.isHidden = false
+                    pactStateView.image = #imageLiteral(resourceName: "pending")
                 }
-				if detail.pactState == "rejected"{
-                    label.backgroundColor = .red
+                if detail.pactState == "declined"{
+                    pactStateView.image = #imageLiteral(resourceName: "declined")
                 }
             }
             if let label = pactPeopleLabel {
@@ -201,6 +203,7 @@ class PactViewController: UIViewController {
 
 		return message;
 	}
+    
 
 	@IBAction func cancelPact() {
 		let dbRef = Database.database().reference().child("Pact").child((detailItem?.pactID)!)

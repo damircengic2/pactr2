@@ -26,6 +26,10 @@ class Step1ViewController: UIViewController  {
             self.registerLabelError.text! = "Please enter Pact title!"
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     
     

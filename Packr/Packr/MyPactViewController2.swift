@@ -29,8 +29,7 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
+
         navigationItem.leftBarButtonItem = editButtonItem
         
         ref = Database.database().reference()
@@ -119,16 +118,17 @@ class MyPactsViewController2: UIViewController, UITableViewDelegate, UITableView
         // Return false if you do not want the specified item to be editable.
         return true
     }
+    
 
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
     
         if editingStyle == .delete {
            
             let pactID = objects[indexPath.row].pactID
-            self.ref1.child("Pact").child(pactID).setValue(nil)
+            self.ref1.child("Pact").child(pactID).removeValue()
             objects.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-
+            
             
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
